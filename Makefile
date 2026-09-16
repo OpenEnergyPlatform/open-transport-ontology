@@ -14,7 +14,7 @@ VERSION:= $(shell cat VERSION)
 VERSIONDIR := build/$(ONTOLOGY_NAME)/$(VERSION)
 ONTOLOGY_SOURCE := src/ontology
 SCRIPTS := src/scripts
-BFO_SOURCE := s://raw.githubusercontent.com/BFO-ontology/BFO/v2019-08-26/bfo_classes_only.owl
+BFO_SOURCE := https://raw.githubusercontent.com/BFO-ontology/BFO/v2019-08-26/bfo_classes_only.owl
 TMP := tmp
 IMPORTS := $(ONTOLOGY_SOURCE)/imports
 

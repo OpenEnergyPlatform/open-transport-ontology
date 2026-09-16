@@ -32,22 +32,6 @@ This domain ontology is a collaborative effort to represent the context of trans
 #    Annotation properties
 #################################################################
 
-###  http://purl.obolibrary.org/obo/IAO_0000115
-<http://purl.obolibrary.org/obo/IAO_0000115> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000116
-<http://purl.obolibrary.org/obo/IAO_0000116> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000118
-<http://purl.obolibrary.org/obo/IAO_0000118> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.obolibrary.org/obo/IAO_0000119
-<http://purl.obolibrary.org/obo/IAO_0000119> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.obolibrary.org/obo/IAO_0000233
 <http://purl.obolibrary.org/obo/IAO_0000233> rdf:type owl:AnnotationProperty .
 
@@ -58,10 +42,6 @@ dc:contributor rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/elements/1.1/description
 dc:description rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/abstract
-dct:abstract rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
@@ -78,14 +58,6 @@ dct:title rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2000/01/rdf-schema#comment
 rdfs:comment rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#closeMatch
-<http://www.w3.org/2004/02/skos/core#closeMatch> rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#exactMatch
-<http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:AnnotationProperty .
 
 
 ###  https://openenergyplatform.org/ontology/oeo/OEO_00020426
