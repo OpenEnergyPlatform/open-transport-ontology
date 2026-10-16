@@ -10,8 +10,8 @@
 @base <http://w3id.org/oto/> .
 
 <http://w3id.org/oto/oto-shared/> rdf:type owl:Ontology ;
-                                   owl:versionIRI <http://w3id.org/oto/develop/oto-shared.ttl> ;
-                                   owl:imports <https://raw.githubusercontent.com/BFO-ontology/BFO/v2.0/bfo.owl> ;
+                                   owl:versionIRI <https://w3id.org/oto/develop/oto-shared.ttl> ;
+                                   owl:imports <http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl> ;
                                    dct:abstract "The Open Transport Ontology is an ontology for all aspects of the transport modelling domain. The \"Shared\" module covers all entities that are relevant for all our other modules. This includes shared imports like the BFO."@en ;
                                    dct:license "http://creativecommons.org/publicdomain/zero/1.0/" ;
                                    dct:title "Open Transport Ontology (Shared module)" .
