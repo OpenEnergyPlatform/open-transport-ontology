@@ -21,7 +21,7 @@ jobs:
       - name: Run LintedData
         continue-on-error: true
         run: |
-          LintedData "build/oto/$(cat VERSION)/oto-full.ttl" \
+          LintedData "src/ontology/oto.ttl" \
             --config config/linted-data-config.yml \
             --markdown linted-data.md
 
