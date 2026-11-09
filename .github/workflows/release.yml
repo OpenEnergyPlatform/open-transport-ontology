@@ -64,7 +64,7 @@ jobs:
   linted-data:
     needs: build
     uses: ./.github/workflows/linted-data.yml
-    #continue-on-error: true
+    # continue-on-error: true
 
   deploy:
     needs: build
