@@ -62,3 +62,8 @@ jobs:
           fi
           echo "Ontology is inconsistent: $OUT"
           exit 1
+
+  linted-data:
+    needs: [build, test]
+    uses: ./.github/workflows/linted-data.yml
+    #continue-on-error: true

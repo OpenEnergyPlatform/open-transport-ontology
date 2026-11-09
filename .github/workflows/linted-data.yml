@@ -1,0 +1,43 @@
+
+name: LintedData
+
+on:
+  workflow_call:
+
+jobs:
+  linted-data:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    container: dlrdw/linteddata:latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifacts
+          path: build/oto
+
+      - name: Run LintedData
+        run: |
+          LintedData "src/ontology/oto.ttl" \
+            --config config/linted-data-config.yml \
+            --markdown linted-data.md
+
+      - name: Add results to job summary
+        if: ${{ !cancelled() }}
+        run: |
+          if [ -f linted-data.md ]; then
+            head -c 1047552 linted-data.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "LintedData report was not generated." \
+              >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload full report
+        if: ${{ !cancelled() && hashFiles('linted-data.md') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: linteddata-md
+          path: linted-data.md

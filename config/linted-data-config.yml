@@ -1,0 +1,4 @@
+checks:
+  OBO:
+    DuplicatedDefinitionsCheck: false
+    OntologyIriOboConformanceCheck: false

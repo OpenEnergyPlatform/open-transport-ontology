@@ -36,6 +36,13 @@ jobs:
       - name: make
         run: |
             make
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: build/oto
+
       - name: build documentation
         run: |
           java -jar widoco.jar \
@@ -52,6 +59,12 @@ jobs:
         uses: actions/upload-pages-artifact@v5
         with:
           path: build/doc
+
+  
+  linted-data:
+    needs: build
+    uses: ./.github/workflows/linted-data.yml
+    #continue-on-error: true
 
   deploy:
     needs: build
