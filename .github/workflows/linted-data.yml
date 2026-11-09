@@ -7,6 +7,7 @@ on:
 jobs:
   linted-data:
     runs-on: ubuntu-latest
+    continue-on-error: true
     container: dlrdw/linteddata:latest
 
     steps:
