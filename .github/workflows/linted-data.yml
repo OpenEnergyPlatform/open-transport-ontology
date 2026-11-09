@@ -19,7 +19,6 @@ jobs:
           path: build/oto
 
       - name: Run LintedData
-        continue-on-error: true
         run: |
           LintedData "src/ontology/oto.ttl" \
             --config config/linted-data-config.yml \
